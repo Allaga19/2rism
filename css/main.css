@@ -132,6 +132,7 @@ body {
 .form {
    display: flex;
    align-items: center;
+	align-self: center;
    width: 1140px;
    height: 88px;
    padding: 8px;
