@@ -6,13 +6,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>2rism</title>
-	<link rel="stylesheet" href="./css/main.css" />
-	<link rel="stylesheet" href="./css/media.css" />
+	<!-- <link rel="stylesheet" href="./css/main.css" /> -->
 
 	<link rel="stylesheet" href="./libs/autoComplete/css/autoComplete.01.css">
 	<link rel="stylesheet" href="./libs/custom-select/custom-select.css">
 	<!-- <link rel="stylesheet" href="./libs/easepick/easpick.min.css"> -->
 	<link rel="stylesheet" href="./css/main.css" />
+	<link rel="stylesheet" href="./css/media.css" />
 </head>
 
 <body>
@@ -23,7 +23,6 @@
 				<a href="#!" class="logo">
 					<img src="./img/logo/logo.svg" alt="2Rism" />
 				</a>
-
 				<ul class="nav-list">
 					<li class="nav-list__item">
 						<a href="#" class="nav-list__link nav-list__link--active">home</a>
@@ -47,18 +46,21 @@
 						<a href="#" class="nav-list__link">contact</a>
 					</li>
 				</ul>
-
-				<div class="user">
-					<div class="user__content">
-						<span class="user__greeting">Holla,</span>
-						<span class="user__name">Ales Nesetril</span>
-					</div>
-					<div class="user__avatar">
-						<img class="user__img" src="./img/header/user.jpg" alt="Avatar">
+				<div class="nav__user">
+					<div class="user">
+						<div class="user__content">
+							<span class="user__greeting">Holla,</span>
+							<span class="user__name">Ales Nesetril</span>
+						</div>
+						<div class="user__avatar">
+							<img class="user__img" src="./img/header/user.jpg" alt="Avatar">
+						</div>
 					</div>
 				</div>
+				<button class="mobile-nav-btn">
+					<span class="nav-icon"></span>
+				</button>
 			</nav>
-
 			<div class="header__content">
 				<h1 class="header__title">
 					Discover the most engaging places
@@ -69,7 +71,7 @@
 				</button>
 			</div>
 
-			<form action="" class="form">
+			<form action="" class="form none">
 				<!-- Выбор стран -->
 				<div class="form__input-wrapper form__input--location">
 					<label for="location" class="form__label">Location</label>
@@ -109,9 +111,20 @@
 
 		</div>
 	</header>
-
+	<!-- Мобильное меню -->
+	<div class="mobile-nav-fade"></div>  <!--Затемнение экрана -->
+		<div class="mobile-nav">
+			<ul class="mobile-nav__list">
+				<li><a href="#" class="active">Home</a></li>
+				<li><a href="#">hotels</a></li>
+				<li><a href="#">restaurants</a></li>
+				<li><a href="#">tours</a></li>
+				<li><a href="#">destinations</a></li>
+				<li><a href="#">activities</a></li>
+				<li><a href="#">contact</a></li>
+			</ul>
+		</div>
 	<main class="main">
-
 		<!-- Popular -->
 		<section class="section">
 			<div class="container">
@@ -246,11 +259,11 @@
 				</div>
 			</div>
 		</section>
-	
+
 		<!-- Tips -->
 		<section class="section">
 			<div class="container">
-		
+
 				<header class="section__header">
 					<h2 class="title-1">Travel Tips and Advice</h2>
 					<a href="#!" class="button-more">
@@ -258,19 +271,21 @@
 						<img src="./img/icons/arrow-more.svg" alt="Arrow">
 					</a>
 				</header>
-		
+
 				<div class="section__cards section__cards--2-in-row">
-		
+
 					<article class="card card--wide">
 						<a href="#!" class="card__link"></a>
 						<img class="card__img card__img--no-margin card__img--h100" src="./img/tips/01.jpg" alt="Img">
-		
+
 						<div class="card__desc">
 							<h3 class="card__title card__title--big">East Village Ice Cream Crawl</h3>
-							<p class="card__text">We will stop at five different world-class ice cream shops on this 1.5 mile 1.5
-								hour tour. At each ice cream store we'll explore the story behind the business and see what makes the
+							<p class="card__text">We will stop at five different world-class ice cream shops on this 1.5 mile
+								1.5
+								hour tour. At each ice cream store we'll explore the story behind the business and see what
+								makes the
 								ice cream unique as you savor every…</p>
-		
+
 							<footer class="card__footer card__footer--wide">
 								<a href="#date" class="card__footer-link card__footer-link--date">Today</a>
 								<a href="#author" class="card__footer-link card__footer-link--author">Maria Philips</a>
@@ -278,16 +293,18 @@
 							</footer>
 						</div>
 					</article>
-		
+
 					<article class="card card--wide">
 						<a href="#!" class="card__link"></a>
 						<img class="card__img card__img--no-margin card__img--h100" src="./img/tips/02.jpg" alt="Img">
-		
+
 						<div class="card__desc">
 							<h3 class="card__title card__title--big">Brooklyn Bridge cinematic photo walk</h3>
-							<p class="card__text">This experience takes place at the Brooklyn Bridge Park and Brooklyn Bridge, but
-								I’m always open to capture clients at different locations upon request for an additional charge.</p>
-		
+							<p class="card__text">This experience takes place at the Brooklyn Bridge Park and Brooklyn Bridge,
+								but
+								I’m always open to capture clients at different locations upon request for an additional charge.
+							</p>
+
 							<footer class="card__footer card__footer--wide">
 								<a href="#date" class="card__footer-link card__footer-link--date">Today</a>
 								<a href="#author" class="card__footer-link card__footer-link--author">Maria Philips</a>
@@ -295,7 +312,7 @@
 							</footer>
 						</div>
 					</article>
-		
+
 				</div>
 			</div>
 		</section>
@@ -348,9 +365,11 @@
 				<div class="about-us">
 					<div class="about-us__desc">
 						<h3 class="about-us__title">About Us</h3>
-						<p class="about-us__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a sapien
+						<p class="about-us__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a
+							sapien
 							justo. Nulla facilisis tristique imperdiet. Nullam a placerat odio. Sed in ex augue. Aliquam porta
-							consectetur lorem sit amet ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+							consectetur lorem sit amet ultrices. Class aptent taciti sociosqu ad litora torquent per conubia
+							nostra,
 							per inceptos himenaeos.</p>
 						<div class="about-us__btn">
 							<a href="#" class="button-more">Read more <img src="./img/icons/arrow-more.svg" alt="Arrow"></a>
@@ -407,7 +426,7 @@
 					</div>
 					<div class="footer__nav">
 						<h3 class="footer__nav-title">Company</h3>
-	
+
 						<ul class="footer__nav-list">
 							<li class="footer__nav-item">
 								<a href="#!" class="footer__nav-link">Why 2rism</a>
@@ -421,12 +440,12 @@
 							<li class="footer__nav-item">
 								<a href="#!" class="footer__nav-link">Blog</a>
 							</li>
-	
+
 						</ul>
 					</div>
 					<div class="footer__nav">
 						<h3 class="footer__nav-title">Support</h3>
-	
+
 						<ul class="footer__nav-list">
 							<li class="footer__nav-item">
 								<a href="#!" class="footer__nav-link">Account</a>
@@ -461,7 +480,6 @@
 		</div>
 	</footer>
 
-
 	<script src="./libs/autoComplete/autoComplete.min.js"></script>
 	<script src="./libs/custom-select/custom-select.min.js"></script>
 	<script src="./libs/easepick/easepick.min.js"></script>
@@ -473,5 +491,3 @@
 </body>
 
 </html>
-<!-- 2:28:20 https://www.youtube.com/watch?v=3S17zU_qQTU -->
-<!-- 2:52:50 -->

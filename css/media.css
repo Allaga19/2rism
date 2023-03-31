@@ -31,27 +31,22 @@
 		min-height: 500px;
 		border-radius: 0 0 40px 40px;
 	}
-
 	.container--header {
 		justify-content: flex-start;
 		row-gap: 90px;
 	}
-
 	.header__title {
 		font-size: 32px;
 	}
-
 	.nav-list {
 		display: none;
 	}
 	.nav__user {
 		display: none;
 	}
-
 	.mobile-nav-btn {
 		display: block;
 	}
-
 	.main {
 		row-gap: 60px;
 		padding-top: 40px;
