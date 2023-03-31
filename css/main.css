@@ -212,7 +212,7 @@ body {
    gap: 32px;
 }
 
-.section__cards--popular {
+.section__cards--6-in-row {
    grid-template-columns: repeat(6, 1fr);
 }
 
